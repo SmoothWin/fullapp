@@ -8,4 +8,10 @@ const con = mysql.createConnection({
     database:process.env.DB_DB
 })
 
+con.connect(function(err){
+    if(err) throw err;
+    console.log(`Connected to sql DB`)
+});
+// const con = mysql.createConnection("mysql://fullstackapp:password123@localhost:3308/user");
+
 module.exports = con;
